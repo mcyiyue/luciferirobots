@@ -1,15 +1,23 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOMClient from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import ShowLMemberCards from './ShowLMemberCards';
+import {LMemberData} from './LMemberData';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+
+const container=document.getElementById('root');
+
+//Create a root
+const root=ReactDOMClient.createRoot(container);
+
+//Render Element to Root
+root.render(<ShowLMemberCards memberList={LMemberData}/>);
+
+// ReactDOM.render(
+//   <LMember name='Jo Immanuel'/>,
+//   document.getElementById('root')
+// );
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
