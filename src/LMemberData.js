@@ -31,6 +31,6 @@ export const LMemberData = [
 
     {
         name: 'Novan Syahputera',
-        title: 'The Pilosopher - "Tukang Gali Kubur"'
+        title: 'The Philosopher - "Tukang Gali Kubur"'
     }
 ]

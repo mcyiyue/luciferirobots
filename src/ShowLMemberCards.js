@@ -1,10 +1,35 @@
 import React from 'react';
 import LMemberCard from './LMemberCard';
+import {LMemberData} from './LMemberData';
+import SearchBox from './SearchBox';
 
 class ShowLMemberCards extends React.Component{
 
+    constructor(){
+        super();
+        this.state = {
+            searchText: '',
+        }
+    }
+
+    onSearchChange = (event) => {
+        this.setState(
+            {
+                searchText: event.target.value
+
+            }
+        )
+    }
+
+
+    filterMember = () => {
+        return (LMemberData.filter(data => {
+            return data.name.toLowerCase().includes(this.state.searchText.toString().toLowerCase()) //Return filtered data based on searchBox
+        }))
+    }
+
     mappingData(){
-        const memberList = this.props.memberList.map((data, i) => { //Map member data in props array into memberList Variable
+        const memberList = this.filterMember().map((data, i) => { //Map member data in props array into memberList Variable
             return <LMemberCard  memberData={data} key={i}/>  //Return component to show member card for each array
         })
         return memberList; //Return memberList variable
@@ -13,9 +38,9 @@ class ShowLMemberCards extends React.Component{
     render(){
         return(
             <>
-            <div className='jumbotron text-center'>
-                <h1>LUCIFERI ROBOTS</h1>
-            </div>
+              <div className='d-flex justify-content-center search-bar'>
+                 <SearchBox onSearchChange={this.onSearchChange} className='align-self-center' />
+            </div>  
              <div className='container'>
                  <div className='row'>
                     {this.mappingData()}

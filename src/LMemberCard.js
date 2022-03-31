@@ -1,7 +1,6 @@
 import React from 'react';
 
 
-
 class LMember extends React.Component {
 
     constructor(){
@@ -9,7 +8,7 @@ class LMember extends React.Component {
         this.state = {
             seeRobot: 'false',
             invertedValue: 'true',
-            buttonText: 'See Robot'
+            buttonText: 'See Robot Form'
         }
     }
     
@@ -42,9 +41,9 @@ class LMember extends React.Component {
         }
         return(
             <>  
-                <div className='col text-center'>
+                <div className='col'>
                     <div className='tag'>
-                        <h5>{name}</h5>
+                        <h6>{name}</h6>
                         <p>{title}</p>
                     </div>
                     <div>

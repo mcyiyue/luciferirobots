@@ -10,5 +10,14 @@ img {
 }
 
 .jumbotron {
-    margin-bottom: 3em;
+    margin-bottom: 1em;
+}
+
+.search-bar {
+    margin-bottom: 1em;
+}
+
+img:hover {
+    transition-duration: 0.3s;
+    transform: rotate(5deg);
 }
