@@ -31,22 +31,30 @@ class LMember extends React.Component {
     }
 
     render(){
+    
+        const {name, title} = this.props.memberData;
         let filePath='';
-        let name='Jo Immanuel';
-        let title='Dota2 Pro Player';
+
         if(this.state.seeRobot==='true'){
-            filePath=`https://robohash.org/${name}`
+            filePath=`https://robohash.org/${name}` //Set picture file path into robohash url if seeRobot value is 'true'
         } else {
-            filePath=`../img/${name}.jpg`;
+            filePath=`../img/${name}.jpg`; //Set picture file path into local image file if seeRobot value is not 'true'
         }
         return(
-            <>  <h1>{name}</h1>
-                <h3>{title}</h3>
-                <img src={filePath} alt='No Photos'></img>
-                <p>
-                    <button value={this.state.invertedValue} onClick={this.onButtonClick}>{this.state.buttonText}</button>
-                </p>
-
+            <>  
+                <div className='col text-center'>
+                    <div className='tag'>
+                        <h5>{name}</h5>
+                        <p>{title}</p>
+                    </div>
+                    <div>
+                        <img src={filePath} className='' alt='No Photos'></img>
+                        <p>
+                            <button className='btn btn-primary'value={this.state.invertedValue} onClick={this.onButtonClick}>{this.state.buttonText}</button>
+                        </p>
+                    </div>
+                        
+                </div>
             </>
         )         
     }

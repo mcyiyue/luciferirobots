@@ -4,19 +4,24 @@ import LMemberCard from './LMemberCard';
 class ShowLMemberCards extends React.Component{
 
     mappingData(){
-        const memberList = this.props.memberList.forEach((data) =>{
-            console.log(data);
-            return <LMemberCard  />
+        const memberList = this.props.memberList.map((data, i) => { //Map member data in props array into memberList Variable
+            return <LMemberCard  memberData={data} key={i}/>  //Return component to show member card for each array
         })
-        //console.log(this.props.memberList)
-        return memberList;
+        return memberList; //Return memberList variable
+        
     }
     render(){
-        console.log(this.mappingData());
         return(
-            <>{
-                // {content}    
-            }</>
+            <>
+            <div className='jumbotron text-center'>
+                <h1>LUCIFERI ROBOTS</h1>
+            </div>
+             <div className='container'>
+                 <div className='row'>
+                    {this.mappingData()}
+                 </div>
+            </div>
+            </>   
         )
     }
 }
