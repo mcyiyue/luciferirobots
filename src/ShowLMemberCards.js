@@ -19,6 +19,7 @@ class ShowLMemberCards extends React.Component{
 
             }
         )
+        console.log(event.target.value)
     }
 
 
@@ -29,9 +30,11 @@ class ShowLMemberCards extends React.Component{
     }
 
     mappingData(){
+        console.log(this.filterMember());
         const memberList = this.filterMember().map((data, i) => { //Map member data in props array into memberList Variable
             return <LMemberCard  memberData={data} key={i}/>  //Return component to show member card for each array
         })
+        console.log('MemberList',memberList);
         return memberList; //Return memberList variable
         
     }

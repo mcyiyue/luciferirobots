@@ -3,21 +3,18 @@ import React from 'react';
 
 class LMember extends React.Component {
 
-    constructor(props){ //must initialize props in parameter to assign it in variable
+    constructor(){ //must initialize props in parameter to assign it in variable
         super();
         this.state  = {
             invertedValue: 1,
             seeRobot: 0,
             buttonText: 'See Robot Form'
         }
-        this.name = props.memberData.name;
-        this.title = props.memberData.title;
         
     }
     
-    onButtonClick = (event) => {
-        
-        if (Boolean(parseInt(event.target.value))===true) {    
+    onButtonClick = () => {
+        if (Boolean(parseInt(this.state.invertedValue))===true) {    
             this.setState({
                     invertedValue : 0,
                     seeRobot : 1,
@@ -35,7 +32,6 @@ class LMember extends React.Component {
     }
 
     setFilePath(){
-        console.log(this.props.memberData);
         if(Boolean(this.state.seeRobot)){
             return `https://robohash.org/${this.name}` //Set picture file path into robohash url if seeRobot value is 'true'
         } else {
@@ -44,7 +40,8 @@ class LMember extends React.Component {
     }
 
     render(){
-        
+        this.name = this.props.memberData.name;
+        this.title = this.props.memberData.title;
         return(
             <>  
                 <div className='col'>
@@ -53,9 +50,9 @@ class LMember extends React.Component {
                         <p>{this.title}</p>
                     </div>
                     <div>
-                        <img src={this.setFilePath()} className='' alt='No Photos'></img>
+                        <img src={this.setFilePath()} className='' alt='No Photos' onClick={this.onButtonClick}></img>
                         <p>
-                            <button className='btn btn-primary' value={this.state.invertedValue} onClick={this.onButtonClick}>{this.state.buttonText}</button>
+                            <button className='btn btn-primary' onClick={this.onButtonClick}>{this.state.buttonText}</button>
                         </p>
                     </div>
                         
