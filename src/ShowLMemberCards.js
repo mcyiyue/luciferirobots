@@ -36,7 +36,6 @@ class ShowLMemberCards extends React.Component{
         })
         console.log('MemberList',memberList);
         return memberList; //Return memberList variable
-        
     }
     render(){
         return(
