@@ -6,25 +6,22 @@ class LMember extends React.Component {
     constructor(){ //must initialize props in parameter to assign it in variable
         super();
         this.state  = {
-            invertedValue: 1,
             seeRobot: 0,
             buttonText: 'See Robot Form'
         }
         
     }
     
-    onButtonClick = () => {
-        if (Boolean(parseInt(this.state.invertedValue))===true) {    
+    onButtonClick = (name) => {
+        if (Boolean(parseInt(this.state.seeRobot))===true) {    
             this.setState({
-                    invertedValue : 0,
-                    seeRobot : 1,
+                    seeRobot : 0,
                     buttonText: 'See Human Form'
                 }
             );
         } else{
             this.setState({
-                invertedValue : 1,
-                seeRobot : 0,
+                seeRobot : 1,
                 buttonText: 'See Robot Form'
             });
         }
@@ -50,7 +47,7 @@ class LMember extends React.Component {
                         <p>{this.title}</p>
                     </div>
                     <div>
-                        <img src={this.setFilePath()} className='' alt='No Photos' onClick={this.onButtonClick}></img>
+                        <img src={this.setFilePath()} className='' alt='No Photos' number='23' onClick={() => this.onButtonClick(this.name)}></img>
                         <p>
                             <button className='btn btn-primary' onClick={this.onButtonClick}>{this.state.buttonText}</button>
                         </p>
