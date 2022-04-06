@@ -1,5 +1,4 @@
 import React from 'react';
-import ScrollBox from './ScrollBox';
 
 
 class ShowLMemberCards extends React.Component{
@@ -7,9 +6,11 @@ class ShowLMemberCards extends React.Component{
     render(){
         return(
             <>
-             <ScrollBox>
-                {this.props.user}
-             </ScrollBox>
+             <div className='container'>
+                 <div className='row'>
+                    {this.props.user}
+                 </div>
+            </div>
             </>   
         )
     }
