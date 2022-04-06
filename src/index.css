@@ -11,3 +11,27 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+img {
+  width: 8em;
+  max-height: 100%;
+}
+
+.tag {
+  white-space: nowrap;
+  width: 100%;
+  max-height: 100%;
+}
+
+.jumbotron {
+  margin-bottom: 1em;
+}
+
+.search-bar {
+  margin-bottom: 1em;
+}
+
+img:hover {
+  transition-duration: 0.3s;
+  transform: rotate(5deg);
+}
