@@ -30,14 +30,17 @@ class LMember extends React.Component {
 
     setFilePath(name){
         if(Boolean(this.state.seeRobot)){
-            return `https://robohash.org/${name}` //Set picture file path into robohash url if seeRobot value is 'true'
+            //Set picture file path into robohash url if seeRobot value is 'true'
+            return `https://robohash.org/${name}`
         } else {
-            return `../img/${name}.jpg`; //Set picture file path into local image file if seeRobot value is not 'true'
+            //Set picture file path into local image file in public folder if seeRobot value is not 'true'
+            return `${process.env.PUBLIC_URL}/img/${name}.jpg`;
         }
     }
 
     render(){
-        const {name, title} = this.props.memberData; //create variable name and title from object props memberdata
+        //create variable name and title from object props memberdata
+        const {name, title} = this.props.memberData;
         const {buttonText} = this.state;
         return(
             <>  
