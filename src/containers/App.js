@@ -28,7 +28,6 @@ class App extends React.Component {
 
             }
         )
-        console.log(event.target.value)
     }
 
 
@@ -47,7 +46,9 @@ class App extends React.Component {
                 <div className='d-flex justify-content-center search-bar'>
                     <SearchBox onSearchChange={this.onSearchChange} className='align-self-center' />
                 </div>
-                <ShowLMemberCards user={this.mappingData()} />
+                <div className='container main-frame' style={{overflowY: 'scroll', border: '1px solid black', height: '700px'}}>
+                    <ShowLMemberCards user={this.mappingData()} />
+                </div>
             </>
             
         )

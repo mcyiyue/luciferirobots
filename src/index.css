@@ -35,3 +35,7 @@ img:hover {
   transition-duration: 0.3s;
   transform: rotate(5deg);
 }
+
+.main-frame {
+  padding: 2em;
+}
