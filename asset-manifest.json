@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/mcyiyue.github.io/luciferirobots/static/css/main.9d392cec.css",
+    "main.js": "/mcyiyue.github.io/luciferirobots/static/js/main.15b57e94.js",
+    "index.html": "/mcyiyue.github.io/luciferirobots/index.html",
+    "main.9d392cec.css.map": "/mcyiyue.github.io/luciferirobots/static/css/main.9d392cec.css.map",
+    "main.15b57e94.js.map": "/mcyiyue.github.io/luciferirobots/static/js/main.15b57e94.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9d392cec.css",
+    "static/js/main.15b57e94.js"
+  ]
+}
