@@ -100,3 +100,17 @@ h6 {
 .contrast-title {
   font-family: Raleway Regular;
 }
+
+input[type=search] {
+  border: 1px solid #7a12d6;
+  border-radius: 5px;
+  padding: 0.5em;
+  width: 10em;
+  -webkit-transition: width .35s ease-in-out;
+  transition: width .35s ease-in-out;
+}
+
+input[type=search]:focus {
+  border: 1px solid #8f0505;
+  width: 15em;
+}
