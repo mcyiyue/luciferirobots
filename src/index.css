@@ -82,6 +82,11 @@ img:hover {
 
 .btn-custom:focus {
   background-color: #400079;
+  
+}
+
+.btn-custom:active {
+
 }
 
 .btn-custom:hover{
@@ -111,6 +116,7 @@ input[type=search] {
 }
 
 input[type=search]:focus {
-  border: 1px solid #8f0505;
+  outline: 1px solid #400079;
+  outline-offset: -4px;
   width: 15em;
 }
