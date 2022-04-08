@@ -1,16 +1,48 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* raleway-regular - latin */
+@font-face {
+  font-family: 'Raleway Regular';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./fonts/raleway-v26-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Raleway'),
+       url('./fonts/raleway-v26-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./fonts/raleway-v26-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./fonts/raleway-v26-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('./fonts/raleway-v26-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('./fonts/raleway-v26-latin-regular.svg#Raleway') format('svg'); /* Legacy iOS */
 }
 
-code {
+/* raleway-900 - latin */
+@font-face {
+  font-family: 'Raleway Bold';
+  font-style: normal;
+  font-weight: 900;
+  src: url('./fonts/raleway-v26-latin-900.eot'); /* IE9 Compat Modes */
+  src: local('Raleway Bold'),
+       url('./fonts/raleway-v26-latin-900.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./fonts/raleway-v26-latin-900.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./fonts/raleway-v26-latin-900.woff') format('woff'), /* Modern Browsers */
+       url('./fonts/raleway-v26-latin-900.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('./fonts/raleway-v26-latin-900.svg#Raleway') format('svg'); /* Legacy iOS */
+}
+
+body {
+  font-family: Raleway Regular;
+}
+
+
+
+h1 {
+  font-family: Raleway Bold;
+  background: -webkit-linear-gradient(#790ed6, #460083, #7b25c6) ;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+}
+
+/* code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
+} */
 
 img {
   width: 8em;
@@ -18,9 +50,10 @@ img {
 }
 
 .tag {
-  white-space: nowrap;
+  /* white-space: nowrap; */
   width: 100%;
   max-height: 100%;
+  margin-bottom: 0em;
 }
 
 .jumbotron {
@@ -38,4 +71,32 @@ img:hover {
 
 .main-frame {
   padding: 2em;
+}
+
+.btn-custom {
+  margin-top: 0.5em;
+  white-space: nowrap;
+  font-size: 1em;
+  background-color: #400079;
+}
+
+.btn-custom:focus {
+  background-color: #400079;
+}
+
+.btn-custom:hover{
+  background-color: #7a12d6;
+}
+
+h6 {
+  font-family: Raleway Bold;
+  margin-bottom: 0em;
+}
+
+.col {
+  margin-bottom: 1em;
+}
+
+.contrast-title {
+  font-family: Raleway Regular;
 }

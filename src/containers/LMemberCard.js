@@ -44,7 +44,7 @@ class LMember extends React.Component {
         const {buttonText} = this.state;
         return(
             <>  
-                <div className='col'>
+                <div className='col col-md-3 col-xs-6'>
                     <div className='tag'>
                         <h6>{name}</h6>
                         <p>{title}</p>
@@ -52,7 +52,7 @@ class LMember extends React.Component {
                     <div>
                         <img src={this.setFilePath(name)} className='' alt='No Photos' onClick={this.onButtonClick}></img>
                         <p>
-                            <button className='btn btn-primary' onClick={this.onButtonClick}>{buttonText}</button>
+                            <button className='btn btn-primary btn-custom' onClick={this.onButtonClick}>{buttonText}</button>
                         </p>
                     </div>
                         
