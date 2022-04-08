@@ -3,6 +3,7 @@ import SearchBox from '../components/SearchBox';
 import ShowLMemberCards from '../components/ShowLMemberCards';
 import LMemberCard from './LMemberCard';
 import {LMemberData} from '../LMemberData';
+import ErrorBoundary from '../components/ErrorBoundary';
 
 class App extends React.Component {
     constructor(){
@@ -47,7 +48,9 @@ class App extends React.Component {
                     <SearchBox onSearchChange={this.onSearchChange} className='align-self-center' />
                 </div>
                 <div className='container main-frame' style={{overflowY: 'scroll', border: '1px solid black', height: '700px'}}>
-                    <ShowLMemberCards user={this.mappingData()} />
+                    <ErrorBoundary>
+                        <ShowLMemberCards user={this.mappingData()} />
+                    </ErrorBoundary>
                 </div>
             </>
             
