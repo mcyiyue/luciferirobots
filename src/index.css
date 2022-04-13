@@ -78,6 +78,7 @@ img:hover {
   white-space: nowrap;
   font-size: 1em;
   background-color: #400079;
+  border: none;
 }
 
 .btn-custom:focus {
@@ -86,7 +87,7 @@ img:hover {
 }
 
 .btn-custom:active {
-
+  border: none;
 }
 
 .btn-custom:hover{
