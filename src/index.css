@@ -113,11 +113,11 @@ input[type=search] {
   padding: 0.5em;
   width: 10em;
   -webkit-transition: width .35s ease-in-out;
-  transition: width .35s ease-in-out;
+  transition: width .45s ease-in-out;
 }
 
 input[type=search]:focus {
   outline: 1px solid #400079;
-  outline-offset: -4px;
-  width: 15em;
+  outline-offset: none;
+  width: 20em;
 }
