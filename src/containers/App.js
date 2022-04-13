@@ -42,7 +42,7 @@ class App extends React.Component {
         return (
             <>
                 <div className='jumbotron text-center'>
-                    <h1 className='display-4'>LUCIFERI <span class='contrast-title'>ROBOTS</span></h1>
+                    <h1 className='display-4'>LUCIFERI <span className='contrast-title'>ROBOTS</span></h1>
                 </div>
                 <div className='d-flex justify-content-center search-bar'>
                     <SearchBox onSearchChange={this.onSearchChange} className='align-self-center' />
